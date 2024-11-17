@@ -613,3 +613,11 @@ FADNet(
 nParams=	341980
 >>>>>>>>>> Evaluating
 	 - train set
+	 - test set
+	 Round: 0 |Train Loss: 4.11866 |Train RMSE: 2.02234 |Eval-train Time: 215.361
+	 -----: 0 |Test  Loss: 3.73920 |Test  RMSE: 1.78217 |Eval-test  Time: 108.682
+	 -----: Time: 328.649
+	 -----: Total Time: 328.649
+Round: 0 |Train Time: 5.740
+>>>>>>>>>> Evaluating
+	 - train set

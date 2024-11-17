@@ -1,3 +1,7 @@
 Namespace(architecture='ring', beta_supp=1.0, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_gazebo', fit_by_epoch=False, local_steps=1, log_freq=40, lr=0.0001, model='FADNet', n_rounds=3300, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='', test=False)
 >>>>>>>>>> start time: Mon Nov 18 01:48:05 2024
 nParams=	341980
+	 Round: 0 |Train Loss: 4.11866 |Train RMSE: 2.02234 |Eval-train Time: 215.361
+	 -----: 0 |Test  Loss: 3.73920 |Test  RMSE: 1.78217 |Eval-test  Time: 108.682
+	 -----: Time: 328.649
+	 -----: Total Time: 328.649

@@ -9,3 +9,19 @@ nParams=	336709
 	 -----: 101 |Test  Loss: 0.07221 |Test  RMSE: 0.19064 |Eval-test  Time: 1.269
 	 -----: Time: 50.275
 	 -----: Total Time: 66.040
+	 Round: 201 |Train Loss: 0.06939 |Train RMSE: 0.25192 |Eval-train Time: 52.630
+	 -----: 201 |Test  Loss: 0.07191 |Test  RMSE: 0.18982 |Eval-test  Time: 12.122
+	 -----: Time: 169.813
+	 -----: Total Time: 235.853
+	 Round: 301 |Train Loss: 0.06938 |Train RMSE: 0.25155 |Eval-train Time: 75.542
+	 -----: 301 |Test  Loss: 0.07192 |Test  RMSE: 0.18998 |Eval-test  Time: 7.507
+	 -----: Time: 218.345
+	 -----: Total Time: 454.198
+	 Round: 401 |Train Loss: 0.06936 |Train RMSE: 0.25176 |Eval-train Time: 44.925
+	 -----: 401 |Test  Loss: 0.07189 |Test  RMSE: 0.18973 |Eval-test  Time: 11.506
+	 -----: Time: 130.817
+	 -----: Total Time: 585.015
+	 Round: 501 |Train Loss: 0.06919 |Train RMSE: 0.25110 |Eval-train Time: 40.166
+	 -----: 501 |Test  Loss: 0.07173 |Test  RMSE: 0.18963 |Eval-test  Time: 14.465
+	 -----: Time: 158.077
+	 -----: Total Time: 743.092

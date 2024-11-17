@@ -123,3 +123,28 @@ Round: 100 |Train Time: 43.403
 Round: 200 |Train Time: 110.285
 >>>>>>>>>> Evaluating
 	 - train set
+	 - test set
+	 Round: 201 |Train Loss: 0.06939 |Train RMSE: 0.25192 |Eval-train Time: 52.630
+	 -----: 201 |Test  Loss: 0.07191 |Test  RMSE: 0.18982 |Eval-test  Time: 12.122
+	 -----: Time: 169.813
+	 -----: Total Time: 235.853
+Round: 300 |Train Time: 199.299
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 301 |Train Loss: 0.06938 |Train RMSE: 0.25155 |Eval-train Time: 75.542
+	 -----: 301 |Test  Loss: 0.07192 |Test  RMSE: 0.18998 |Eval-test  Time: 7.507
+	 -----: Time: 218.345
+	 -----: Total Time: 454.198
+Round: 400 |Train Time: 158.926
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 401 |Train Loss: 0.06936 |Train RMSE: 0.25176 |Eval-train Time: 44.925
+	 -----: 401 |Test  Loss: 0.07189 |Test  RMSE: 0.18973 |Eval-test  Time: 11.506
+	 -----: Time: 130.817
+	 -----: Total Time: 585.015
+Round: 500 |Train Time: 159.951
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
