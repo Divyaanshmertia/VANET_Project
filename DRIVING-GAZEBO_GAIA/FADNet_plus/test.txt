@@ -1,0 +1,7 @@
+Namespace(architecture='ring', beta_supp=1.0, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_gazebo', fit_by_epoch=False, local_steps=1, log_freq=100, lr=0.001, model='FADNet_plus', n_rounds=1000, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='/DATA/m23cse013/FADNet/DRIVING-GAZEBO_GAIA/FADNet_plus', test=True)
+>>>>>>>>>> start time: Sun Nov 17 16:45:14 2024
+nParams=	336709
+	 Round: 1000 |Train Loss: 0.00696 |Train RMSE: 0.08053 |Eval-train Time: 55.770
+	 -----: 1000 |Test  Loss: 0.00758 |Test  RMSE: 0.06926 |Eval-test  Time: 23.758
+	 -----: Time: 82.004
+	 -----: Total Time: 82.004

@@ -1,0 +1,908 @@
+Run experiment in sequential setting..
+Namespace(architecture='ring', beta_supp=0.5, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_udacity', fit_by_epoch=False, local_steps=1, log_freq=100, lr=0.001, model='FADNet', n_rounds=3600, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='', test=False)
+>>>>>>>>>> start time: Fri Nov 15 18:44:04 2024
+- Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/train.npz
+Loading processed data from data/driving_udacity/gaia/train/train.npz...
+Images:  (30866, 1, 200, 200)
+Ground truths:  (30866,)
+Done!
+- Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/test/test.npz
+Loading processed data from data/driving_udacity/gaia/test/test.npz...
+Images:  (7720, 1, 200, 200)
+Ground truths:  (7720,)
+Done!
+>>>>>>>>>> Loading worker-datasets
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/0.npz
+Loading processed data from data/driving_udacity/gaia/train/0.npz...
+Images:  (2111, 1, 200, 200)
+Ground truths:  (2111,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/1.npz
+Loading processed data from data/driving_udacity/gaia/train/1.npz...
+Images:  (2112, 1, 200, 200)
+Ground truths:  (2112,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/2.npz
+Loading processed data from data/driving_udacity/gaia/train/2.npz...
+Images:  (3120, 1, 200, 200)
+Ground truths:  (3120,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/3.npz
+Loading processed data from data/driving_udacity/gaia/train/3.npz...
+Images:  (3159, 1, 200, 200)
+Ground truths:  (3159,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/4.npz
+Loading processed data from data/driving_udacity/gaia/train/4.npz...
+Images:  (3159, 1, 200, 200)
+Ground truths:  (3159,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/5.npz
+Loading processed data from data/driving_udacity/gaia/train/5.npz...
+Images:  (3159, 1, 200, 200)
+Ground truths:  (3159,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/6.npz
+Loading processed data from data/driving_udacity/gaia/train/6.npz...
+Images:  (3159, 1, 200, 200)
+Ground truths:  (3159,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/7.npz
+Loading processed data from data/driving_udacity/gaia/train/7.npz...
+Images:  (2960, 1, 200, 200)
+Ground truths:  (2960,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/8.npz
+Loading processed data from data/driving_udacity/gaia/train/8.npz...
+Images:  (2960, 1, 200, 200)
+Ground truths:  (2960,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/9.npz
+Loading processed data from data/driving_udacity/gaia/train/9.npz...
+Images:  (1579, 1, 200, 200)
+Ground truths:  (1579,)
+Done!
+	 + Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/10.npz
+Loading processed data from data/driving_udacity/gaia/train/10.npz...
+Images:  (3388, 1, 200, 200)
+Ground truths:  (3388,)
+Done!
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+Parameter conv1.weight: torch.float32
+Parameter conv1.bias: torch.float32
+Parameter res_block1.batch_norm.weight: torch.float32
+Parameter res_block1.batch_norm.bias: torch.float32
+Parameter res_block1.conv2d.weight: torch.float32
+Parameter res_block1.conv2d.bias: torch.float32
+Parameter res_block1.batch_norm_1.weight: torch.float32
+Parameter res_block1.batch_norm_1.bias: torch.float32
+Parameter res_block1.conv2d_2.weight: torch.float32
+Parameter res_block1.conv2d_2.bias: torch.float32
+Parameter conv2.weight: torch.float32
+Parameter conv2.bias: torch.float32
+Parameter conv2_support.weight: torch.float32
+Parameter conv2_support.bias: torch.float32
+Parameter res_block2.batch_norm.weight: torch.float32
+Parameter res_block2.batch_norm.bias: torch.float32
+Parameter res_block2.conv2d.weight: torch.float32
+Parameter res_block2.conv2d.bias: torch.float32
+Parameter res_block2.batch_norm_1.weight: torch.float32
+Parameter res_block2.batch_norm_1.bias: torch.float32
+Parameter res_block2.conv2d_2.weight: torch.float32
+Parameter res_block2.conv2d_2.bias: torch.float32
+Parameter conv3.weight: torch.float32
+Parameter conv3.bias: torch.float32
+Parameter conv3_support.weight: torch.float32
+Parameter conv3_support.bias: torch.float32
+Parameter res_block3.batch_norm.weight: torch.float32
+Parameter res_block3.batch_norm.bias: torch.float32
+Parameter res_block3.conv2d.weight: torch.float32
+Parameter res_block3.conv2d.bias: torch.float32
+Parameter res_block3.batch_norm_1.weight: torch.float32
+Parameter res_block3.batch_norm_1.bias: torch.float32
+Parameter res_block3.conv2d_2.weight: torch.float32
+Parameter res_block3.conv2d_2.bias: torch.float32
+Parameter conv4.weight: torch.float32
+Parameter conv4.bias: torch.float32
+Parameter conv4_support.weight: torch.float32
+Parameter conv4_support.bias: torch.float32
+Parameter fc.weight: torch.float32
+Parameter fc.bias: torch.float32
+Parameter fc_accumulation.weight: torch.float32
+Parameter fc_accumulation.bias: torch.float32
+>>>>>>>>>> Network Architecture
+FADNet(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(2, 2))
+  (max_pool1): MaxPool2d(kernel_size=(3, 3), stride=2, padding=0, dilation=1, ceil_mode=False)
+  (res_block1): Sequential(
+    (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2d): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2))
+    (batch_norm_1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu_1): ReLU()
+    (conv2d_2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+  )
+  (conv2): Conv2d(32, 32, kernel_size=(1, 1), stride=(2, 2))
+  (conv2_support): Conv2d(32, 256, kernel_size=(1, 1), stride=(7, 7))
+  (res_block2): Sequential(
+    (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2d): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2))
+    (batch_norm_1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu_1): ReLU()
+    (conv2d_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  )
+  (conv3): Conv2d(32, 64, kernel_size=(1, 1), stride=(2, 2))
+  (conv3_support): Conv2d(32, 256, kernel_size=(1, 1), stride=(4, 4))
+  (res_block3): Sequential(
+    (batch_norm): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2d): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2))
+    (batch_norm_1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu_1): ReLU()
+    (conv2d_2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1))
+  )
+  (conv4): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2))
+  (conv4_support): Conv2d(64, 256, kernel_size=(1, 1), stride=(2, 2))
+  (fc): Linear(in_features=7, out_features=7, bias=True)
+  (dropout): Dropout2d(p=0.5, inplace=False)
+  (relu): ReLU()
+  (fc_accumulation): Linear(in_features=3, out_features=1, bias=True)
+)
+nParams=	341980
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 0 |Train Loss: 0.66983 |Train RMSE: 0.81188 |Eval-train Time: 3.017
+	 -----: 0 |Test  Loss: 0.67364 |Test  RMSE: 0.75539 |Eval-test  Time: 0.680
+	 -----: Time: 11.181
+	 -----: Total Time: 11.181
+Round: 0 |Train Time: 0.223
+Round: 100 |Train Time: 22.359
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 101 |Train Loss: 0.08243 |Train RMSE: 0.27900 |Eval-train Time: 2.735
+	 -----: 101 |Test  Loss: 0.08544 |Test  RMSE: 0.23662 |Eval-test  Time: 0.681
+	 -----: Time: 26.244
+	 -----: Total Time: 37.425
+Round: 200 |Train Time: 25.989
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 201 |Train Loss: 0.14068 |Train RMSE: 0.36884 |Eval-train Time: 2.739
+	 -----: 201 |Test  Loss: 0.14606 |Test  RMSE: 0.33144 |Eval-test  Time: 0.684
+	 -----: Time: 25.993
+	 -----: Total Time: 63.418
+Round: 300 |Train Time: 26.113
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 301 |Train Loss: 0.26066 |Train RMSE: 0.50358 |Eval-train Time: 2.772
+	 -----: 301 |Test  Loss: 0.27133 |Test  RMSE: 0.46094 |Eval-test  Time: 0.688
+	 -----: Time: 26.154
+	 -----: Total Time: 89.572
+Round: 400 |Train Time: 26.190
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 401 |Train Loss: 0.21806 |Train RMSE: 0.46015 |Eval-train Time: 2.760
+	 -----: 401 |Test  Loss: 0.22451 |Test  RMSE: 0.42096 |Eval-test  Time: 0.691
+	 -----: Time: 26.175
+	 -----: Total Time: 115.748
+Round: 500 |Train Time: 25.785
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 501 |Train Loss: 0.28266 |Train RMSE: 0.52602 |Eval-train Time: 2.756
+	 -----: 501 |Test  Loss: 0.28874 |Test  RMSE: 0.49016 |Eval-test  Time: 0.686
+	 -----: Time: 25.774
+	 -----: Total Time: 141.521
+Round: 600 |Train Time: 26.037
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 601 |Train Loss: 0.25307 |Train RMSE: 0.49527 |Eval-train Time: 2.741
+	 -----: 601 |Test  Loss: 0.25533 |Test  RMSE: 0.44709 |Eval-test  Time: 0.684
+	 -----: Time: 26.023
+	 -----: Total Time: 167.544
+Round: 700 |Train Time: 25.980
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 701 |Train Loss: 0.40092 |Train RMSE: 0.62544 |Eval-train Time: 2.577
+	 -----: 701 |Test  Loss: 0.40105 |Test  RMSE: 0.57257 |Eval-test  Time: 0.650
+	 -----: Time: 25.776
+	 -----: Total Time: 193.320
+Round: 800 |Train Time: 25.374
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 801 |Train Loss: 2.08130 |Train RMSE: 1.43595 |Eval-train Time: 2.706
+	 -----: 801 |Test  Loss: 2.08522 |Test  RMSE: 1.38079 |Eval-test  Time: 0.696
+	 -----: Time: 25.549
+	 -----: Total Time: 218.869
+Round: 900 |Train Time: 26.038
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 901 |Train Loss: 1.75894 |Train RMSE: 1.31917 |Eval-train Time: 2.765
+	 -----: 901 |Test  Loss: 1.76230 |Test  RMSE: 1.26842 |Eval-test  Time: 0.686
+	 -----: Time: 26.092
+	 -----: Total Time: 244.961
+Round: 1000 |Train Time: 25.774
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1001 |Train Loss: 4.61238 |Train RMSE: 2.13980 |Eval-train Time: 2.759
+	 -----: 1001 |Test  Loss: 4.62980 |Test  RMSE: 2.07428 |Eval-test  Time: 0.688
+	 -----: Time: 25.769
+	 -----: Total Time: 270.730
+Round: 1100 |Train Time: 25.591
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1101 |Train Loss: 2.29928 |Train RMSE: 1.50898 |Eval-train Time: 2.512
+	 -----: 1101 |Test  Loss: 2.30989 |Test  RMSE: 1.45760 |Eval-test  Time: 0.625
+	 -----: Time: 25.277
+	 -----: Total Time: 296.006
+Round: 1200 |Train Time: 25.754
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1201 |Train Loss: 0.98606 |Train RMSE: 0.98519 |Eval-train Time: 2.779
+	 -----: 1201 |Test  Loss: 0.99371 |Test  RMSE: 0.93208 |Eval-test  Time: 0.687
+	 -----: Time: 26.089
+	 -----: Total Time: 322.095
+Round: 1300 |Train Time: 25.557
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1301 |Train Loss: 0.76988 |Train RMSE: 0.86824 |Eval-train Time: 2.514
+	 -----: 1301 |Test  Loss: 0.78033 |Test  RMSE: 0.81038 |Eval-test  Time: 0.630
+	 -----: Time: 25.229
+	 -----: Total Time: 347.324
+Round: 1400 |Train Time: 25.361
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1401 |Train Loss: 3.70250 |Train RMSE: 1.91468 |Eval-train Time: 2.521
+	 -----: 1401 |Test  Loss: 3.73648 |Test  RMSE: 1.84267 |Eval-test  Time: 0.628
+	 -----: Time: 25.369
+	 -----: Total Time: 372.693
+Round: 1500 |Train Time: 25.308
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1501 |Train Loss: 3.85843 |Train RMSE: 1.95478 |Eval-train Time: 2.528
+	 -----: 1501 |Test  Loss: 3.90450 |Test  RMSE: 1.87394 |Eval-test  Time: 0.625
+	 -----: Time: 25.311
+	 -----: Total Time: 398.004
+Round: 1600 |Train Time: 25.273
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1601 |Train Loss: 0.93799 |Train RMSE: 0.95918 |Eval-train Time: 2.509
+	 -----: 1601 |Test  Loss: 0.96211 |Test  RMSE: 0.89298 |Eval-test  Time: 0.627
+	 -----: Time: 25.255
+	 -----: Total Time: 423.259
+Round: 1700 |Train Time: 25.116
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1701 |Train Loss: 0.77436 |Train RMSE: 0.87011 |Eval-train Time: 2.584
+	 -----: 1701 |Test  Loss: 0.79902 |Test  RMSE: 0.81102 |Eval-test  Time: 0.645
+	 -----: Time: 25.206
+	 -----: Total Time: 448.464
+Round: 1800 |Train Time: 25.689
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1801 |Train Loss: 0.98069 |Train RMSE: 0.98066 |Eval-train Time: 2.752
+	 -----: 1801 |Test  Loss: 1.00673 |Test  RMSE: 0.91652 |Eval-test  Time: 0.688
+	 -----: Time: 25.907
+	 -----: Total Time: 474.371
+Round: 1900 |Train Time: 25.512
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1901 |Train Loss: 1.26090 |Train RMSE: 1.11347 |Eval-train Time: 2.502
+	 -----: 1901 |Test  Loss: 1.29519 |Test  RMSE: 1.05076 |Eval-test  Time: 0.625
+	 -----: Time: 25.194
+	 -----: Total Time: 499.565
+Round: 2000 |Train Time: 25.532
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2001 |Train Loss: 1.66369 |Train RMSE: 1.28013 |Eval-train Time: 2.644
+	 -----: 2001 |Test  Loss: 1.70986 |Test  RMSE: 1.21633 |Eval-test  Time: 0.657
+	 -----: Time: 25.716
+	 -----: Total Time: 525.281
+Round: 2100 |Train Time: 25.908
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2101 |Train Loss: 2.13330 |Train RMSE: 1.45351 |Eval-train Time: 2.762
+	 -----: 2101 |Test  Loss: 2.16965 |Test  RMSE: 1.40412 |Eval-test  Time: 0.684
+	 -----: Time: 26.051
+	 -----: Total Time: 551.332
+Round: 2200 |Train Time: 26.010
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2201 |Train Loss: 3.04469 |Train RMSE: 1.73672 |Eval-train Time: 2.744
+	 -----: 2201 |Test  Loss: 3.09033 |Test  RMSE: 1.68415 |Eval-test  Time: 0.685
+	 -----: Time: 25.990
+	 -----: Total Time: 577.322
+Round: 2300 |Train Time: 25.969
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2301 |Train Loss: 3.06910 |Train RMSE: 1.74352 |Eval-train Time: 2.753
+	 -----: 2301 |Test  Loss: 3.11930 |Test  RMSE: 1.69429 |Eval-test  Time: 0.686
+	 -----: Time: 25.979
+	 -----: Total Time: 603.302
+Round: 2400 |Train Time: 25.687
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2401 |Train Loss: 1.57133 |Train RMSE: 1.24773 |Eval-train Time: 2.609
+	 -----: 2401 |Test  Loss: 1.61071 |Test  RMSE: 1.20939 |Eval-test  Time: 0.657
+	 -----: Time: 25.508
+	 -----: Total Time: 628.810
+Round: 2500 |Train Time: 25.586
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2501 |Train Loss: 1.11781 |Train RMSE: 1.05191 |Eval-train Time: 2.559
+	 -----: 2501 |Test  Loss: 1.14377 |Test  RMSE: 1.01874 |Eval-test  Time: 0.637
+	 -----: Time: 25.518
+	 -----: Total Time: 654.327
+Round: 2600 |Train Time: 25.843
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2601 |Train Loss: 0.61879 |Train RMSE: 0.77826 |Eval-train Time: 2.787
+	 -----: 2601 |Test  Loss: 0.64499 |Test  RMSE: 0.73289 |Eval-test  Time: 0.688
+	 -----: Time: 26.127
+	 -----: Total Time: 680.455
+Round: 2700 |Train Time: 26.047
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2701 |Train Loss: 0.82594 |Train RMSE: 0.90294 |Eval-train Time: 2.765
+	 -----: 2701 |Test  Loss: 0.85172 |Test  RMSE: 0.86954 |Eval-test  Time: 0.687
+	 -----: Time: 26.028
+	 -----: Total Time: 706.483
+Round: 2800 |Train Time: 25.666
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2801 |Train Loss: 0.63369 |Train RMSE: 0.78845 |Eval-train Time: 2.580
+	 -----: 2801 |Test  Loss: 0.66080 |Test  RMSE: 0.74613 |Eval-test  Time: 0.645
+	 -----: Time: 25.433
+	 -----: Total Time: 731.916
+Round: 2900 |Train Time: 25.648
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 2901 |Train Loss: 1.06268 |Train RMSE: 1.02341 |Eval-train Time: 2.740
+	 -----: 2901 |Test  Loss: 1.09264 |Test  RMSE: 0.97977 |Eval-test  Time: 0.685
+	 -----: Time: 25.848
+	 -----: Total Time: 757.764
+Round: 3000 |Train Time: 25.927
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 3001 |Train Loss: 0.96084 |Train RMSE: 0.97441 |Eval-train Time: 2.742
+	 -----: 3001 |Test  Loss: 0.98366 |Test  RMSE: 0.93689 |Eval-test  Time: 0.686
+	 -----: Time: 25.934
+	 -----: Total Time: 783.698
+Round: 3100 |Train Time: 25.455
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 3101 |Train Loss: 0.50395 |Train RMSE: 0.70438 |Eval-train Time: 2.618
+	 -----: 3101 |Test  Loss: 0.51891 |Test  RMSE: 0.67339 |Eval-test  Time: 0.660
+	 -----: Time: 25.296
+	 -----: Total Time: 808.994
+Round: 3200 |Train Time: 25.506
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 3201 |Train Loss: 1.00503 |Train RMSE: 0.99806 |Eval-train Time: 2.607
+	 -----: 3201 |Test  Loss: 1.02367 |Test  RMSE: 0.96803 |Eval-test  Time: 0.653
+	 -----: Time: 25.488
+	 -----: Total Time: 834.483
+Round: 3300 |Train Time: 25.473
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 3301 |Train Loss: 0.72372 |Train RMSE: 0.84611 |Eval-train Time: 2.640
+	 -----: 3301 |Test  Loss: 0.73854 |Test  RMSE: 0.81832 |Eval-test  Time: 0.654
+	 -----: Time: 25.514
+	 -----: Total Time: 859.997
+Round: 3400 |Train Time: 25.775
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 3401 |Train Loss: 0.48730 |Train RMSE: 0.69334 |Eval-train Time: 2.757
+	 -----: 3401 |Test  Loss: 0.49915 |Test  RMSE: 0.66508 |Eval-test  Time: 0.683
+	 -----: Time: 25.923
+	 -----: Total Time: 885.919
+Round: 3500 |Train Time: 26.054
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 3501 |Train Loss: 0.74624 |Train RMSE: 0.85958 |Eval-train Time: 2.738
+	 -----: 3501 |Test  Loss: 0.76288 |Test  RMSE: 0.83044 |Eval-test  Time: 0.685
+	 -----: Time: 26.033
+	 -----: Total Time: 911.952
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 3600 |Train Loss: 0.74637 |Train RMSE: 0.85944 |Eval-train Time: 2.763
+	 -----: 3600 |Test  Loss: 0.76288 |Test  RMSE: 0.83044 |Eval-test  Time: 0.693
+	 -----: Time: 25.662
+	 -----: Total Time: 937.615

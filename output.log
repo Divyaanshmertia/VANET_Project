@@ -1,0 +1,301 @@
+Run experiment in sequential setting..
+Namespace(architecture='ring', bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_gazebo', fit_by_epoch=False, local_steps=1, log_freq=40, lr=0.0001, model='FADNet', n_rounds=1000, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='', test=False)
+>>>>>>>>>> start time: Fri Nov  8 00:13:24 2024
+- Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/train.npz
+Loading data from data/driving_gazebo/gaia/train/train.npz...
+Filenames:  (23390,)
+Ground truths:  (23390,)
+Done!
+- Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/test/test.npz
+Loading data from data/driving_gazebo/gaia/test/test.npz...
+Filenames:  (10130,)
+Ground truths:  (10130,)
+Done!
+>>>>>>>>>> Loading worker-datasets
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/0.npz
+Loading data from data/driving_gazebo/gaia/train/0.npz...
+Filenames:  (2144,)
+Ground truths:  (2144,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/1.npz
+Loading data from data/driving_gazebo/gaia/train/1.npz...
+Filenames:  (2145,)
+Ground truths:  (2145,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/2.npz
+Loading data from data/driving_gazebo/gaia/train/2.npz...
+Filenames:  (2140,)
+Ground truths:  (2140,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/3.npz
+Loading data from data/driving_gazebo/gaia/train/3.npz...
+Filenames:  (2150,)
+Ground truths:  (2150,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/4.npz
+Loading data from data/driving_gazebo/gaia/train/4.npz...
+Filenames:  (2158,)
+Ground truths:  (2158,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/5.npz
+Loading data from data/driving_gazebo/gaia/train/5.npz...
+Filenames:  (2150,)
+Ground truths:  (2150,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/6.npz
+Loading data from data/driving_gazebo/gaia/train/6.npz...
+Filenames:  (2138,)
+Ground truths:  (2138,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/7.npz
+Loading data from data/driving_gazebo/gaia/train/7.npz...
+Filenames:  (2142,)
+Ground truths:  (2142,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/8.npz
+Loading data from data/driving_gazebo/gaia/train/8.npz...
+Filenames:  (2138,)
+Ground truths:  (2138,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/9.npz
+Loading data from data/driving_gazebo/gaia/train/9.npz...
+Filenames:  (2045,)
+Ground truths:  (2045,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/10.npz
+Loading data from data/driving_gazebo/gaia/train/10.npz...
+Filenames:  (2040,)
+Ground truths:  (2040,)
+Done!
+>>>>>>>>>> Network Architecture
+FADNet(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(2, 2))
+  (max_pool1): MaxPool2d(kernel_size=(3, 3), stride=2, padding=0, dilation=1, ceil_mode=False)
+  (res_block1): Sequential(
+    (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2d): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2))
+    (batch_norm_1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu_1): ReLU()
+    (conv2d_2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+  )
+  (conv2): Conv2d(32, 32, kernel_size=(1, 1), stride=(2, 2))
+  (conv2_support): Conv2d(32, 256, kernel_size=(1, 1), stride=(7, 7))
+  (res_block2): Sequential(
+    (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2d): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2))
+    (batch_norm_1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu_1): ReLU()
+    (conv2d_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  )
+  (conv3): Conv2d(32, 64, kernel_size=(1, 1), stride=(2, 2))
+  (conv3_support): Conv2d(32, 256, kernel_size=(1, 1), stride=(4, 4))
+  (res_block3): Sequential(
+    (batch_norm): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2d): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2))
+    (batch_norm_1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu_1): ReLU()
+    (conv2d_2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1))
+  )
+  (conv4): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2))
+  (conv4_support): Conv2d(64, 256, kernel_size=(1, 1), stride=(2, 2))
+  (fc): Linear(in_features=7, out_features=7, bias=True)
+  (dropout): Dropout2d(p=0.5, inplace=False)
+  (relu): ReLU()
+  (fc_accumulation): Linear(in_features=3, out_features=1, bias=True)
+)
+nParams=	341980
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 0 |Train Loss: 4.11866 |Train RMSE: 2.02234 |Eval-train Time: 55.901
+	 -----: 0 |Test  Loss: 3.73920 |Test  RMSE: 1.78217 |Eval-test  Time: 23.970
+	 -----: Time: 82.271
+	 -----: Total Time: 82.271
+Round: 0 |Train Time: 1.078
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 41 |Train Loss: 2.33650 |Train RMSE: 1.52410 |Eval-train Time: 55.668
+	 -----: 41 |Test  Loss: 2.64586 |Test  RMSE: 1.52243 |Eval-test  Time: 23.987
+	 -----: Time: 123.246
+	 -----: Total Time: 205.518
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 81 |Train Loss: 1.11025 |Train RMSE: 1.05040 |Eval-train Time: 55.420
+	 -----: 81 |Test  Loss: 1.33772 |Test  RMSE: 1.08717 |Eval-test  Time: 23.861
+	 -----: Time: 120.752
+	 -----: Total Time: 326.270
+Round: 100 |Train Time: 262.680
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 121 |Train Loss: 0.80955 |Train RMSE: 0.89726 |Eval-train Time: 55.233
+	 -----: 121 |Test  Loss: 0.99345 |Test  RMSE: 0.93898 |Eval-test  Time: 24.034
+	 -----: Time: 120.699
+	 -----: Total Time: 446.969
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 161 |Train Loss: 0.67639 |Train RMSE: 0.81982 |Eval-train Time: 55.317
+	 -----: 161 |Test  Loss: 0.84178 |Test  RMSE: 0.86337 |Eval-test  Time: 23.984
+	 -----: Time: 120.780
+	 -----: Total Time: 567.749
+Round: 200 |Train Time: 261.952
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 201 |Train Loss: 0.57530 |Train RMSE: 0.75596 |Eval-train Time: 55.541
+	 -----: 201 |Test  Loss: 0.70880 |Test  RMSE: 0.79202 |Eval-test  Time: 23.951
+	 -----: Time: 120.793
+	 -----: Total Time: 688.542
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 241 |Train Loss: 0.53313 |Train RMSE: 0.72774 |Eval-train Time: 55.440
+	 -----: 241 |Test  Loss: 0.65610 |Test  RMSE: 0.76090 |Eval-test  Time: 23.921
+	 -----: Time: 120.791
+	 -----: Total Time: 809.333
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 281 |Train Loss: 0.49610 |Train RMSE: 0.70191 |Eval-train Time: 56.116
+	 -----: 281 |Test  Loss: 0.60759 |Test  RMSE: 0.73115 |Eval-test  Time: 23.943
+	 -----: Time: 121.879
+	 -----: Total Time: 931.212
+Round: 300 |Train Time: 342.887
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 321 |Train Loss: 0.50129 |Train RMSE: 0.70533 |Eval-train Time: 55.493
+	 -----: 321 |Test  Loss: 0.61133 |Test  RMSE: 0.73317 |Eval-test  Time: 24.077
+	 -----: Time: 120.910
+	 -----: Total Time: 1052.122
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 361 |Train Loss: 0.47931 |Train RMSE: 0.68991 |Eval-train Time: 55.832
+	 -----: 361 |Test  Loss: 0.58755 |Test  RMSE: 0.71785 |Eval-test  Time: 23.977
+	 -----: Time: 121.171
+	 -----: Total Time: 1173.294
+Round: 400 |Train Time: 263.058
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 401 |Train Loss: 0.51412 |Train RMSE: 0.71435 |Eval-train Time: 56.069
+	 -----: 401 |Test  Loss: 0.62519 |Test  RMSE: 0.74056 |Eval-test  Time: 23.849
+	 -----: Time: 121.669
+	 -----: Total Time: 1294.963
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 441 |Train Loss: 0.54818 |Train RMSE: 0.73780 |Eval-train Time: 55.450
+	 -----: 441 |Test  Loss: 0.66124 |Test  RMSE: 0.76191 |Eval-test  Time: 23.962
+	 -----: Time: 120.865
+	 -----: Total Time: 1415.828
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 481 |Train Loss: 0.57101 |Train RMSE: 0.75294 |Eval-train Time: 55.528
+	 -----: 481 |Test  Loss: 0.68607 |Test  RMSE: 0.77700 |Eval-test  Time: 23.848
+	 -----: Time: 120.768
+	 -----: Total Time: 1536.596
+Round: 500 |Train Time: 342.180
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 521 |Train Loss: 0.52257 |Train RMSE: 0.72020 |Eval-train Time: 55.762
+	 -----: 521 |Test  Loss: 0.62625 |Test  RMSE: 0.74311 |Eval-test  Time: 23.715
+	 -----: Time: 120.415
+	 -----: Total Time: 1657.010
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 561 |Train Loss: 0.55014 |Train RMSE: 0.73944 |Eval-train Time: 55.971
+	 -----: 561 |Test  Loss: 0.65280 |Test  RMSE: 0.75997 |Eval-test  Time: 23.696
+	 -----: Time: 121.074
+	 -----: Total Time: 1778.084
+Round: 600 |Train Time: 262.384
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 601 |Train Loss: 0.60209 |Train RMSE: 0.77344 |Eval-train Time: 55.934
+	 -----: 601 |Test  Loss: 0.70697 |Test  RMSE: 0.79200 |Eval-test  Time: 23.910
+	 -----: Time: 121.262
+	 -----: Total Time: 1899.346
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 641 |Train Loss: 0.62791 |Train RMSE: 0.78992 |Eval-train Time: 55.462
+	 -----: 641 |Test  Loss: 0.73092 |Test  RMSE: 0.80645 |Eval-test  Time: 23.979
+	 -----: Time: 120.804
+	 -----: Total Time: 2020.150
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 681 |Train Loss: 0.60849 |Train RMSE: 0.77791 |Eval-train Time: 56.538
+	 -----: 681 |Test  Loss: 0.70416 |Test  RMSE: 0.79237 |Eval-test  Time: 23.628
+	 -----: Time: 121.518
+	 -----: Total Time: 2141.669
+Round: 700 |Train Time: 342.788
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 721 |Train Loss: 0.62413 |Train RMSE: 0.78776 |Eval-train Time: 56.473
+	 -----: 721 |Test  Loss: 0.71762 |Test  RMSE: 0.80053 |Eval-test  Time: 23.837
+	 -----: Time: 121.632
+	 -----: Total Time: 2263.301
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 761 |Train Loss: 0.68030 |Train RMSE: 0.82260 |Eval-train Time: 56.076
+	 -----: 761 |Test  Loss: 0.77023 |Test  RMSE: 0.83074 |Eval-test  Time: 24.136
+	 -----: Time: 121.630
+	 -----: Total Time: 2384.931
+Round: 800 |Train Time: 264.195
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 801 |Train Loss: 0.69036 |Train RMSE: 0.82861 |Eval-train Time: 55.786
+	 -----: 801 |Test  Loss: 0.77740 |Test  RMSE: 0.83536 |Eval-test  Time: 23.894
+	 -----: Time: 121.292
+	 -----: Total Time: 2506.222
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 841 |Train Loss: 0.67934 |Train RMSE: 0.82244 |Eval-train Time: 55.773
+	 -----: 841 |Test  Loss: 0.76270 |Test  RMSE: 0.82773 |Eval-test  Time: 24.092
+	 -----: Time: 121.811
+	 -----: Total Time: 2628.033
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 881 |Train Loss: 0.72928 |Train RMSE: 0.85194 |Eval-train Time: 55.689
+	 -----: 881 |Test  Loss: 0.81259 |Test  RMSE: 0.85500 |Eval-test  Time: 24.075
+	 -----: Time: 121.210
+	 -----: Total Time: 2749.243
+Round: 900 |Train Time: 343.438
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 921 |Train Loss: 0.75387 |Train RMSE: 0.86631 |Eval-train Time: 55.879
+	 -----: 921 |Test  Loss: 0.83919 |Test  RMSE: 0.86915 |Eval-test  Time: 24.231
+	 -----: Time: 122.286
+	 -----: Total Time: 2871.529
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 961 |Train Loss: 0.73267 |Train RMSE: 0.85377 |Eval-train Time: 56.213
+	 -----: 961 |Test  Loss: 0.81696 |Test  RMSE: 0.85761 |Eval-test  Time: 24.469
+	 -----: Time: 122.322
+	 -----: Total Time: 2993.851
+>>>>>>>>>> Evaluating
+	 - train set
+	 - test set
+	 Round: 1000 |Train Loss: 0.73267 |Train RMSE: 0.85392 |Eval-train Time: 55.308
+	 -----: 1000 |Test  Loss: 0.81696 |Test  RMSE: 0.85761 |Eval-test  Time: 23.941
+	 -----: Time: 118.275
+	 -----: Total Time: 3112.125

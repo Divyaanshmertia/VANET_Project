@@ -1,0 +1,234 @@
+vanet
+/csehome/m23cse013/.conda/envs/vanet/bin/python
+Python executable: /csehome/m23cse013/.conda/envs/vanet/bin/python
+Python from sys.executable:
+/csehome/m23cse013/.conda/envs/vanet/bin/python
+Package                 Version
+----------------------- -----------
+absl-py                 1.4.0
+anyio                   3.6.2
+argon2-cffi             21.3.0
+argon2-cffi-bindings    21.2.0
+async-generator         1.10
+attrs                   22.2.0
+Babel                   2.11.0
+backcall                0.2.0
+bleach                  4.1.0
+cachetools              4.2.4
+certifi                 2021.5.30
+cffi                    1.15.1
+charset-normalizer      2.0.12
+comm                    0.1.4
+contextvars             2.4
+cvxpy                   1.1.24
+cycler                  0.11.0
+cymem                   1.31.2
+cytoolz                 0.9.0.1
+dataclasses             0.8
+decorator               5.1.1
+defusedxml              0.7.1
+dill                    0.2.9
+ecos                    2.0.14
+entrypoints             0.4
+ftfy                    4.4.3
+geographiclib           1.52
+geopy                   2.2.0
+google-auth             2.22.0
+google-auth-oauthlib    0.4.6
+grpcio                  1.48.2
+html5lib                1.1
+idna                    3.10
+immutables              0.19
+importlib-metadata      4.8.3
+importlib-resources     5.4.0
+ipykernel               5.5.6
+ipython                 7.16.3
+ipython-genutils        0.2.0
+ipywidgets              7.8.5
+jedi                    0.17.2
+Jinja2                  3.0.3
+joblib                  1.1.1
+json5                   0.9.16
+jsonschema              3.2.0
+jupyter                 1.1.1
+jupyter-client          7.1.2
+jupyter-console         6.4.3
+jupyter-core            4.9.2
+jupyter-server          1.13.1
+jupyterlab              3.2.9
+jupyterlab-pygments     0.1.2
+jupyterlab-server       2.10.3
+jupyterlab_widgets      1.1.11
+kiwisolver              1.3.1
+Markdown                3.3.7
+MarkupSafe              2.0.1
+matplotlib              3.3.4
+mistune                 0.8.4
+mplleaflet              0.0.5
+msgpack                 0.6.2
+msgpack-numpy           0.4.8
+msgpack-python          0.5.6
+murmurhash              0.28.0
+nbclassic               0.3.5
+nbclient                0.5.9
+nbconvert               6.0.7
+nbformat                5.1.3
+nest-asyncio            1.6.0
+networkx                2.4
+notebook                6.4.10
+numpy                   1.19.5
+oauthlib                3.2.2
+osqp                    0.6.7.post3
+packaging               21.3
+pandocfilters           1.5.1
+parso                   0.7.1
+pathlib                 1.0.1
+pexpect                 4.9.0
+pickleshare             0.7.5
+Pillow                  8.4.0
+pip                     21.2.2
+plac                    0.9.6
+preshed                 1.0.1
+prometheus-client       0.17.1
+prompt-toolkit          3.0.36
+protobuf                3.19.6
+ptyprocess              0.7.0
+pyasn1                  0.5.1
+pyasn1-modules          0.3.0
+pycparser               2.21
+Pygments                2.14.0
+pyparsing               3.1.4
+pyrsistent              0.18.0
+python-dateutil         2.9.0.post0
+pytz                    2024.2
+pyzmq                   25.1.2
+qdldl                   0.1.7.post4
+regex                   2017.4.5
+requests                2.27.1
+requests-oauthlib       2.0.0
+rsa                     4.9
+scikit-learn            0.24.2
+scipy                   1.5.4
+scs                     3.2.3
+Send2Trash              1.8.3
+sentencepiece           0.2.0
+setuptools              58.0.4
+six                     1.16.0
+sniffio                 1.2.0
+spacy                   2.0.0
+tensorboard             2.10.1
+tensorboard-data-server 0.6.1
+tensorboard-plugin-wit  1.8.1
+terminado               0.12.1
+testpath                0.6.0
+thinc                   6.10.3
+threadpoolctl           3.1.0
+toolz                   0.12.0
+torch                   1.4.0+cu92
+torchtext               0.5.0
+torchvision             0.5.0+cu92
+tornado                 6.1
+tqdm                    4.64.1
+traitlets               4.3.3
+typing_extensions       4.1.1
+ujson                   4.3.0
+urllib3                 1.26.20
+wcwidth                 0.2.13
+webencodings            0.5.1
+websocket-client        1.3.1
+Werkzeug                2.0.3
+wheel                   0.37.1
+widgetsnbextension      3.6.10
+wrapt                   1.10.11
+zipp                    3.6.0
+/var/spool/slurmd/job18943/slurm_script: line 35: nvcc: command not found
+Sat Oct 26 13:38:43 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA A30                     Off | 00000000:B1:00.0 Off |                    0 |
+| N/A   34C    P0              29W / 165W |      4MiB / 24576MiB |     18%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+################
+gaia
+Number of Workers: 11
+Number of links: 55
+Cycle time for MST architecture: 82.7
+Cycle time for delta-MBST architecture: 82.7 ms
+Cycle time for STAR architecture: 300.6 ms
+Cycle time for RING architecture: 62.7 ms
+FATAL: Cannot solve SDPs without linked blas+lapack libraries
+Install blas+lapack and re-compile SCS with blas+lapack library locations
+ERROR: init_cone failure
+Traceback (most recent call last):
+  File "generate_networks.py", line 152, in <module>
+    args.computation_time, args.model_size, args.communication_budget)
+  File "/csehome/m23cse013/VANET_DFL/FADNet/graph_utils/utils/utils.py", line 274, in get_matcha_cycle_time
+    path_to_history_file=path_to_matching_history_file)
+  File "/csehome/m23cse013/VANET_DFL/FADNet/graph_utils/utils/matcha.py", line 38, in __init__
+    self.activation_probas = self.get_matching_activation_probabilities()
+  File "/csehome/m23cse013/VANET_DFL/FADNet/graph_utils/utils/matcha.py", line 72, in get_matching_activation_probabilities
+    problem.solve()
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/problems/problem.py", line 475, in solve
+    return solve_func(self, *args, **kwargs)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/problems/problem.py", line 982, in _solve
+    self, data, warm_start, verbose, kwargs)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/reductions/solvers/solving_chain.py", line 355, in solve_via_data
+    solver_opts, problem._solver_cache)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/reductions/solvers/conic_solvers/scs_conif.py", line 328, in solve_via_data
+    results, status = solve(solver_opts)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/reductions/solvers/conic_solvers/scs_conif.py", line 323, in solve
+    _results = scs.solve(args, cones, verbose=verbose, **_solver_opts)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/scs/__init__.py", line 177, in solve
+    solver = SCS(data, cone, **settings)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/scs/__init__.py", line 140, in __init__
+    **self._settings
+ValueError: ScsWork allocation error!
+################
+amazon_us
+Number of Workers: 22
+Number of links: 231
+Cycle time for MST architecture: 34.3
+Cycle time for delta-MBST architecture: 34.3 ms
+Cycle time for STAR architecture: 121.2 ms
+Cycle time for RING architecture: 25.9 ms
+FATAL: Cannot solve SDPs without linked blas+lapack libraries
+Install blas+lapack and re-compile SCS with blas+lapack library locations
+ERROR: init_cone failure
+Traceback (most recent call last):
+  File "generate_networks.py", line 152, in <module>
+    args.computation_time, args.model_size, args.communication_budget)
+  File "/csehome/m23cse013/VANET_DFL/FADNet/graph_utils/utils/utils.py", line 274, in get_matcha_cycle_time
+    path_to_history_file=path_to_matching_history_file)
+  File "/csehome/m23cse013/VANET_DFL/FADNet/graph_utils/utils/matcha.py", line 38, in __init__
+    self.activation_probas = self.get_matching_activation_probabilities()
+  File "/csehome/m23cse013/VANET_DFL/FADNet/graph_utils/utils/matcha.py", line 72, in get_matching_activation_probabilities
+    problem.solve()
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/problems/problem.py", line 475, in solve
+    return solve_func(self, *args, **kwargs)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/problems/problem.py", line 982, in _solve
+    self, data, warm_start, verbose, kwargs)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/reductions/solvers/solving_chain.py", line 355, in solve_via_data
+    solver_opts, problem._solver_cache)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/reductions/solvers/conic_solvers/scs_conif.py", line 328, in solve_via_data
+    results, status = solve(solver_opts)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/cvxpy/reductions/solvers/conic_solvers/scs_conif.py", line 323, in solve
+    _results = scs.solve(args, cones, verbose=verbose, **_solver_opts)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/scs/__init__.py", line 177, in solve
+    solver = SCS(data, cone, **settings)
+  File "/csehome/m23cse013/.conda/envs/vanet/lib/python3.6/site-packages/scs/__init__.py", line 140, in __init__
+    **self._settings
+ValueError: ScsWork allocation error!
