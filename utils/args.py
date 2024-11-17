@@ -23,9 +23,9 @@ def parse_args(args_list=None):
     )
     parser.add_argument(
         '--model',
-        choices=['FADNet_plus'],
-        help='model to use, possible: CDL_FADNet',
-        default='FADNet_plus'
+        choices=['FADNet', 'FADNet_plus'],
+        help='model to use, possible: FADNet, FADNet_plus',
+        default='FADNet'
     )
     parser.add_argument(
         "--random_ring_proba",

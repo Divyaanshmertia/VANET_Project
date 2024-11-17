@@ -1,0 +1,120 @@
+Run experiment in sequential setting..
+Namespace(architecture='ring', beta_supp=1.0, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_gazebo', fit_by_epoch=False, local_steps=1, log_freq=100, lr=0.001, model='FADNet_plus', n_rounds=1000, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='/DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring', test=True)
+>>>>>>>>>> start time: Sun Nov 17 23:05:45 2024
+- Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/train.npz
+Loading data from data/driving_gazebo/gaia/train/train.npz...
+Filenames:  (23390,)
+Ground truths:  (23390,)
+Done!
+- Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/test/test.npz
+Loading data from data/driving_gazebo/gaia/test/test.npz...
+Filenames:  (10130,)
+Ground truths:  (10130,)
+Done!
+>>>>>>>>>> Loading worker-datasets
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/0.npz
+Loading data from data/driving_gazebo/gaia/train/0.npz...
+Filenames:  (2144,)
+Ground truths:  (2144,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/1.npz
+Loading data from data/driving_gazebo/gaia/train/1.npz...
+Filenames:  (2145,)
+Ground truths:  (2145,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/2.npz
+Loading data from data/driving_gazebo/gaia/train/2.npz...
+Filenames:  (2140,)
+Ground truths:  (2140,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/3.npz
+Loading data from data/driving_gazebo/gaia/train/3.npz...
+Filenames:  (2150,)
+Ground truths:  (2150,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/4.npz
+Loading data from data/driving_gazebo/gaia/train/4.npz...
+Filenames:  (2158,)
+Ground truths:  (2158,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/5.npz
+Loading data from data/driving_gazebo/gaia/train/5.npz...
+Filenames:  (2150,)
+Ground truths:  (2150,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/6.npz
+Loading data from data/driving_gazebo/gaia/train/6.npz...
+Filenames:  (2138,)
+Ground truths:  (2138,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/7.npz
+Loading data from data/driving_gazebo/gaia/train/7.npz...
+Filenames:  (2142,)
+Ground truths:  (2142,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/8.npz
+Loading data from data/driving_gazebo/gaia/train/8.npz...
+Filenames:  (2138,)
+Ground truths:  (2138,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/9.npz
+Loading data from data/driving_gazebo/gaia/train/9.npz...
+Filenames:  (2045,)
+Ground truths:  (2045,)
+Done!
+	 + Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/10.npz
+Loading data from data/driving_gazebo/gaia/train/10.npz...
+Filenames:  (2040,)
+Ground truths:  (2040,)
+Done!
+>>>>>>>>>> Network Architecture
+FADNet_plus(
+  (conv1): Conv2d(1, 32, kernel_size=(5, 5), stride=(2, 2))
+  (max_pool1): MaxPool2d(kernel_size=(3, 3), stride=2, padding=0, dilation=1, ceil_mode=False)
+  (res_block1): Sequential(
+    (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2d): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2))
+    (batch_norm_1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu_1): ReLU()
+    (conv2d_2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1))
+  )
+  (conv2): Conv2d(32, 256, kernel_size=(1, 1), stride=(7, 7))
+  (res_block2): Sequential(
+    (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2d): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2))
+    (batch_norm_1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu_1): ReLU()
+    (conv2d_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+  )
+  (conv3): Conv2d(32, 256, kernel_size=(1, 1), stride=(4, 4))
+  (res_block3): Sequential(
+    (batch_norm): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2d): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2))
+    (batch_norm_1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu_1): ReLU()
+    (conv2d_2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1))
+  )
+  (conv4): Conv2d(64, 256, kernel_size=(1, 1), stride=(2, 2))
+  (dropout): Dropout2d(p=0.5, inplace=False)
+  (relu): ReLU()
+  (fc_feature): Linear(in_features=3, out_features=1, bias=True)
+  (fc): Linear(in_features=6272, out_features=1, bias=True)
+)
+nParams=	336709
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_global.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_0.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_1.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_2.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_3.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_4.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_5.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_6.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_7.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_8.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_9.pth
+loading /DATA/m23cse013/FADNet/loggs/experiment_driving_gazebo_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.0001_decay_sqrt_local_steps_1/ring/round_1000/model_silo_10.pth
+>>>>>>>>>> Evaluating
+	 - train set

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python3 main.py driving_udacity --network_name gaia --architecture ring --model FADNet --n_rounds 3600 --bz_train 32 --bz_test 32 --device cuda --log_freq 100 --local_steps 1 --lr 0.001 --decay sqrt --beta_supp 0.5
+python3 main.py driving_udacity --network_name gaia --architecture ring --model FADNet_plus --n_rounds 3300 --bz_train 32 --bz_test 32 --device cuda --log_freq 100 --local_steps 1 --lr 0.001 --decay sqrt --beta_supp 0.5

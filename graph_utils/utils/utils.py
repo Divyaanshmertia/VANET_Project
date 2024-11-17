@@ -278,7 +278,7 @@ def get_matcha_cycle_time(underlay, connectivity_graph, computation_time, model_
                                                  network_save_path=path_to_save_network,
                                                  path_to_history_file=path_to_matching_history_file)
 
-    n_rounds = 3600
+    n_rounds = 3300
     np.random.seed(0)
     for _ in range(n_rounds):
         topology_generator.step()
