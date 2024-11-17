@@ -1,6 +1,6 @@
 Run experiment in sequential setting..
 Namespace(architecture='ring', beta_supp=1.0, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_gazebo', fit_by_epoch=False, local_steps=1, log_freq=40, lr=0.0001, model='FADNet', n_rounds=3300, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='', test=False)
->>>>>>>>>> start time: Sun Nov 17 23:01:07 2024
+>>>>>>>>>> start time: Mon Nov 18 01:48:05 2024
 - Loading: > driving_gazebo < dataset from: data/driving_gazebo/gaia/train/train.npz
 Loading data from data/driving_gazebo/gaia/train/train.npz...
 Filenames:  (23390,)
@@ -613,12 +613,3 @@ FADNet(
 nParams=	341980
 >>>>>>>>>> Evaluating
 	 - train set
-	 - test set
-	 Round: 0 |Train Loss: 4.11866 |Train RMSE: 2.02234 |Eval-train Time: 55.761
-	 -----: 0 |Test  Loss: 3.73920 |Test  RMSE: 1.78217 |Eval-test  Time: 23.952
-	 -----: Time: 82.218
-	 -----: Total Time: 82.218
-Round: 0 |Train Time: 1.037
->>>>>>>>>> Evaluating
-	 - train set
-	 - test set

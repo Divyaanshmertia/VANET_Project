@@ -1,6 +1,6 @@
 Run experiment in sequential setting..
 Namespace(architecture='ring', beta_supp=0.5, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_udacity', fit_by_epoch=False, local_steps=1, log_freq=100, lr=0.001, model='FADNet', n_rounds=3300, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='', test=False)
->>>>>>>>>> start time: Sun Nov 17 23:02:50 2024
+>>>>>>>>>> start time: Mon Nov 18 01:45:47 2024
 - Loading: > driving_udacity < dataset from: data/driving_udacity/gaia/train/train.npz
 Loading processed data from data/driving_udacity/gaia/train/train.npz...
 Images:  (30866, 1, 200, 200)
@@ -614,44 +614,44 @@ nParams=	341980
 >>>>>>>>>> Evaluating
 	 - train set
 	 - test set
-	 Round: 0 |Train Loss: 0.66983 |Train RMSE: 0.81188 |Eval-train Time: 3.522
-	 -----: 0 |Test  Loss: 0.67364 |Test  RMSE: 0.75539 |Eval-test  Time: 0.829
-	 -----: Time: 12.212
-	 -----: Total Time: 12.212
-Round: 0 |Train Time: 0.305
-Round: 100 |Train Time: 27.434
+	 Round: 0 |Train Loss: 0.66983 |Train RMSE: 0.81188 |Eval-train Time: 3.707
+	 -----: 0 |Test  Loss: 0.67364 |Test  RMSE: 0.75539 |Eval-test  Time: 0.819
+	 -----: Time: 12.318
+	 -----: Total Time: 12.318
+Round: 0 |Train Time: 0.269
+Round: 100 |Train Time: 27.203
 >>>>>>>>>> Evaluating
 	 - train set
 	 - test set
-	 Round: 101 |Train Loss: 0.08243 |Train RMSE: 0.27900 |Eval-train Time: 3.174
-	 -----: 101 |Test  Loss: 0.08544 |Test  RMSE: 0.23662 |Eval-test  Time: 0.793
-	 -----: Time: 31.979
-	 -----: Total Time: 44.191
-Round: 200 |Train Time: 31.789
+	 Round: 101 |Train Loss: 0.08243 |Train RMSE: 0.27900 |Eval-train Time: 3.188
+	 -----: 101 |Test  Loss: 0.08544 |Test  RMSE: 0.23662 |Eval-test  Time: 0.785
+	 -----: Time: 31.740
+	 -----: Total Time: 44.059
+Round: 200 |Train Time: 30.913
 >>>>>>>>>> Evaluating
 	 - train set
 	 - test set
-	 Round: 201 |Train Loss: 0.14068 |Train RMSE: 0.36884 |Eval-train Time: 3.166
-	 -----: 201 |Test  Loss: 0.14606 |Test  RMSE: 0.33144 |Eval-test  Time: 0.853
-	 -----: Time: 31.846
-	 -----: Total Time: 76.037
-Round: 300 |Train Time: 29.986
+	 Round: 201 |Train Loss: 0.14068 |Train RMSE: 0.36884 |Eval-train Time: 3.047
+	 -----: 201 |Test  Loss: 0.14606 |Test  RMSE: 0.33144 |Eval-test  Time: 0.755
+	 -----: Time: 30.740
+	 -----: Total Time: 74.799
+Round: 300 |Train Time: 30.623
 >>>>>>>>>> Evaluating
 	 - train set
 	 - test set
-	 Round: 301 |Train Loss: 0.26066 |Train RMSE: 0.50358 |Eval-train Time: 2.924
-	 -----: 301 |Test  Loss: 0.27133 |Test  RMSE: 0.46094 |Eval-test  Time: 0.746
-	 -----: Time: 29.619
-	 -----: Total Time: 105.656
-Round: 400 |Train Time: 38.085
+	 Round: 301 |Train Loss: 0.26066 |Train RMSE: 0.50358 |Eval-train Time: 3.324
+	 -----: 301 |Test  Loss: 0.27133 |Test  RMSE: 0.46094 |Eval-test  Time: 0.848
+	 -----: Time: 31.024
+	 -----: Total Time: 105.823
+Round: 400 |Train Time: 45.901
 >>>>>>>>>> Evaluating
 	 - train set
 	 - test set
-	 Round: 401 |Train Loss: 0.21806 |Train RMSE: 0.46015 |Eval-train Time: 4.648
-	 -----: 401 |Test  Loss: 0.22451 |Test  RMSE: 0.42096 |Eval-test  Time: 1.466
-	 -----: Time: 40.583
-	 -----: Total Time: 146.239
-Round: 500 |Train Time: 52.931
+	 Round: 401 |Train Loss: 0.21806 |Train RMSE: 0.46015 |Eval-train Time: 5.411
+	 -----: 401 |Test  Loss: 0.22451 |Test  RMSE: 0.42096 |Eval-test  Time: 1.366
+	 -----: Time: 48.584
+	 -----: Total Time: 154.407
+Round: 500 |Train Time: 98.318
 >>>>>>>>>> Evaluating
 	 - train set
 	 - test set

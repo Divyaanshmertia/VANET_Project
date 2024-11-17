@@ -1,0 +1,7 @@
+Namespace(architecture='ring', beta_supp=0.5, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_udacity', fit_by_epoch=False, local_steps=1, log_freq=100, lr=0.001, model='FADNet', n_rounds=3600, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='/DATA/m23cse013/FADNet/loggs/experiment_driving_udacity_network_name_gaia_fit_by_epoch_False_bz_train_32_lr_0.001_decay_sqrt_local_steps_1/ring', test=True)
+>>>>>>>>>> start time: Fri Nov 15 19:05:07 2024
+nParams=	341980
+	 Round: 3600 |Train Loss: 0.74630 |Train RMSE: 0.85932 |Eval-train Time: 2.965
+	 -----: 3600 |Test  Loss: 0.76288 |Test  RMSE: 0.83044 |Eval-test  Time: 0.617
+	 -----: Time: 10.538
+	 -----: Total Time: 10.538

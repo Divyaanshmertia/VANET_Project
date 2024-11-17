@@ -1,0 +1,283 @@
+Namespace(architecture='ring', beta_supp=1.0, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_gazebo', fit_by_epoch=False, local_steps=1, log_freq=40, lr=0.0001, model='FADNet', n_rounds=3300, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='', test=False)
+>>>>>>>>>> start time: Sun Nov 17 23:01:07 2024
+nParams=	341980
+	 Round: 0 |Train Loss: 4.11866 |Train RMSE: 2.02234 |Eval-train Time: 55.761
+	 -----: 0 |Test  Loss: 3.73920 |Test  RMSE: 1.78217 |Eval-test  Time: 23.952
+	 -----: Time: 82.218
+	 -----: Total Time: 82.218
+	 Round: 41 |Train Loss: 2.33650 |Train RMSE: 1.52410 |Eval-train Time: 100.468
+	 -----: 41 |Test  Loss: 2.64586 |Test  RMSE: 1.52243 |Eval-test  Time: 43.946
+	 -----: Time: 192.336
+	 -----: Total Time: 274.554
+	 Round: 81 |Train Loss: 1.11025 |Train RMSE: 1.05040 |Eval-train Time: 205.572
+	 -----: 81 |Test  Loss: 1.33772 |Test  RMSE: 1.08717 |Eval-test  Time: 37.644
+	 -----: Time: 383.282
+	 -----: Total Time: 657.836
+	 Round: 121 |Train Loss: 0.80955 |Train RMSE: 0.89726 |Eval-train Time: 85.810
+	 -----: 121 |Test  Loss: 0.99345 |Test  RMSE: 0.93898 |Eval-test  Time: 37.527
+	 -----: Time: 192.813
+	 -----: Total Time: 850.649
+	 Round: 161 |Train Loss: 0.67639 |Train RMSE: 0.81982 |Eval-train Time: 79.808
+	 -----: 161 |Test  Loss: 0.84178 |Test  RMSE: 0.86337 |Eval-test  Time: 35.588
+	 -----: Time: 184.841
+	 -----: Total Time: 1035.490
+	 Round: 201 |Train Loss: 0.57530 |Train RMSE: 0.75596 |Eval-train Time: 80.483
+	 -----: 201 |Test  Loss: 0.70880 |Test  RMSE: 0.79202 |Eval-test  Time: 37.182
+	 -----: Time: 187.064
+	 -----: Total Time: 1222.554
+	 Round: 241 |Train Loss: 0.53313 |Train RMSE: 0.72774 |Eval-train Time: 80.841
+	 -----: 241 |Test  Loss: 0.65610 |Test  RMSE: 0.76090 |Eval-test  Time: 34.032
+	 -----: Time: 183.618
+	 -----: Total Time: 1406.172
+	 Round: 281 |Train Loss: 0.49610 |Train RMSE: 0.70191 |Eval-train Time: 81.967
+	 -----: 281 |Test  Loss: 0.60759 |Test  RMSE: 0.73115 |Eval-test  Time: 37.099
+	 -----: Time: 187.768
+	 -----: Total Time: 1593.940
+	 Round: 321 |Train Loss: 0.50129 |Train RMSE: 0.70533 |Eval-train Time: 78.059
+	 -----: 321 |Test  Loss: 0.61133 |Test  RMSE: 0.73317 |Eval-test  Time: 39.163
+	 -----: Time: 184.835
+	 -----: Total Time: 1778.775
+	 Round: 361 |Train Loss: 0.47931 |Train RMSE: 0.68991 |Eval-train Time: 81.418
+	 -----: 361 |Test  Loss: 0.58755 |Test  RMSE: 0.71785 |Eval-test  Time: 33.623
+	 -----: Time: 183.103
+	 -----: Total Time: 1961.877
+	 Round: 401 |Train Loss: 0.51412 |Train RMSE: 0.71435 |Eval-train Time: 56.497
+	 -----: 401 |Test  Loss: 0.62519 |Test  RMSE: 0.74056 |Eval-test  Time: 24.441
+	 -----: Time: 123.024
+	 -----: Total Time: 2084.901
+	 Round: 441 |Train Loss: 0.54818 |Train RMSE: 0.73780 |Eval-train Time: 57.363
+	 -----: 441 |Test  Loss: 0.66124 |Test  RMSE: 0.76191 |Eval-test  Time: 24.505
+	 -----: Time: 123.850
+	 -----: Total Time: 2208.751
+	 Round: 481 |Train Loss: 0.57101 |Train RMSE: 0.75294 |Eval-train Time: 56.727
+	 -----: 481 |Test  Loss: 0.68607 |Test  RMSE: 0.77700 |Eval-test  Time: 24.266
+	 -----: Time: 122.887
+	 -----: Total Time: 2331.638
+	 Round: 521 |Train Loss: 0.52257 |Train RMSE: 0.72020 |Eval-train Time: 85.544
+	 -----: 521 |Test  Loss: 0.62625 |Test  RMSE: 0.74311 |Eval-test  Time: 38.487
+	 -----: Time: 166.217
+	 -----: Total Time: 2497.855
+	 Round: 561 |Train Loss: 0.55014 |Train RMSE: 0.73944 |Eval-train Time: 86.797
+	 -----: 561 |Test  Loss: 0.65280 |Test  RMSE: 0.75997 |Eval-test  Time: 38.661
+	 -----: Time: 194.086
+	 -----: Total Time: 2691.941
+	 Round: 601 |Train Loss: 0.60209 |Train RMSE: 0.77344 |Eval-train Time: 86.799
+	 -----: 601 |Test  Loss: 0.70697 |Test  RMSE: 0.79200 |Eval-test  Time: 38.720
+	 -----: Time: 196.125
+	 -----: Total Time: 2888.066
+	 Round: 641 |Train Loss: 0.62791 |Train RMSE: 0.78992 |Eval-train Time: 87.031
+	 -----: 641 |Test  Loss: 0.73092 |Test  RMSE: 0.80645 |Eval-test  Time: 39.680
+	 -----: Time: 194.786
+	 -----: Total Time: 3082.853
+	 Round: 681 |Train Loss: 0.60849 |Train RMSE: 0.77791 |Eval-train Time: 89.898
+	 -----: 681 |Test  Loss: 0.70416 |Test  RMSE: 0.79237 |Eval-test  Time: 40.010
+	 -----: Time: 200.208
+	 -----: Total Time: 3283.060
+	 Round: 721 |Train Loss: 0.62413 |Train RMSE: 0.78776 |Eval-train Time: 88.626
+	 -----: 721 |Test  Loss: 0.71762 |Test  RMSE: 0.80053 |Eval-test  Time: 38.335
+	 -----: Time: 197.146
+	 -----: Total Time: 3480.207
+	 Round: 761 |Train Loss: 0.68030 |Train RMSE: 0.82260 |Eval-train Time: 88.131
+	 -----: 761 |Test  Loss: 0.77023 |Test  RMSE: 0.83074 |Eval-test  Time: 38.290
+	 -----: Time: 195.450
+	 -----: Total Time: 3675.657
+	 Round: 801 |Train Loss: 0.69036 |Train RMSE: 0.82861 |Eval-train Time: 80.856
+	 -----: 801 |Test  Loss: 0.77740 |Test  RMSE: 0.83536 |Eval-test  Time: 39.143
+	 -----: Time: 193.671
+	 -----: Total Time: 3869.328
+	 Round: 841 |Train Loss: 0.67934 |Train RMSE: 0.82244 |Eval-train Time: 68.518
+	 -----: 841 |Test  Loss: 0.76270 |Test  RMSE: 0.82773 |Eval-test  Time: 23.865
+	 -----: Time: 166.661
+	 -----: Total Time: 4035.990
+	 Round: 881 |Train Loss: 0.72928 |Train RMSE: 0.85194 |Eval-train Time: 56.302
+	 -----: 881 |Test  Loss: 0.81259 |Test  RMSE: 0.85500 |Eval-test  Time: 23.993
+	 -----: Time: 121.848
+	 -----: Total Time: 4157.838
+	 Round: 921 |Train Loss: 0.75387 |Train RMSE: 0.86631 |Eval-train Time: 56.017
+	 -----: 921 |Test  Loss: 0.83919 |Test  RMSE: 0.86915 |Eval-test  Time: 23.828
+	 -----: Time: 121.266
+	 -----: Total Time: 4279.103
+	 Round: 961 |Train Loss: 0.73267 |Train RMSE: 0.85377 |Eval-train Time: 55.974
+	 -----: 961 |Test  Loss: 0.81696 |Test  RMSE: 0.85761 |Eval-test  Time: 23.858
+	 -----: Time: 121.618
+	 -----: Total Time: 4400.722
+	 Round: 1001 |Train Loss: 0.76015 |Train RMSE: 0.86948 |Eval-train Time: 56.027
+	 -----: 1001 |Test  Loss: 0.84369 |Test  RMSE: 0.87172 |Eval-test  Time: 23.973
+	 -----: Time: 121.507
+	 -----: Total Time: 4522.229
+	 Round: 1041 |Train Loss: 0.77222 |Train RMSE: 0.87670 |Eval-train Time: 56.135
+	 -----: 1041 |Test  Loss: 0.85459 |Test  RMSE: 0.87765 |Eval-test  Time: 23.919
+	 -----: Time: 121.755
+	 -----: Total Time: 4643.984
+	 Round: 1081 |Train Loss: 0.79295 |Train RMSE: 0.88837 |Eval-train Time: 55.124
+	 -----: 1081 |Test  Loss: 0.87555 |Test  RMSE: 0.88835 |Eval-test  Time: 23.932
+	 -----: Time: 120.536
+	 -----: Total Time: 4764.521
+	 Round: 1121 |Train Loss: 0.75181 |Train RMSE: 0.86487 |Eval-train Time: 56.088
+	 -----: 1121 |Test  Loss: 0.83303 |Test  RMSE: 0.86643 |Eval-test  Time: 23.938
+	 -----: Time: 121.726
+	 -----: Total Time: 4886.247
+	 Round: 1161 |Train Loss: 0.80604 |Train RMSE: 0.89569 |Eval-train Time: 55.994
+	 -----: 1161 |Test  Loss: 0.88692 |Test  RMSE: 0.89437 |Eval-test  Time: 24.058
+	 -----: Time: 121.662
+	 -----: Total Time: 5007.909
+	 Round: 1201 |Train Loss: 0.78918 |Train RMSE: 0.88633 |Eval-train Time: 55.806
+	 -----: 1201 |Test  Loss: 0.86669 |Test  RMSE: 0.88401 |Eval-test  Time: 23.867
+	 -----: Time: 121.285
+	 -----: Total Time: 5129.194
+	 Round: 1241 |Train Loss: 0.80767 |Train RMSE: 0.89662 |Eval-train Time: 55.791
+	 -----: 1241 |Test  Loss: 0.88720 |Test  RMSE: 0.89425 |Eval-test  Time: 23.794
+	 -----: Time: 121.351
+	 -----: Total Time: 5250.545
+	 Round: 1281 |Train Loss: 0.79443 |Train RMSE: 0.88930 |Eval-train Time: 55.902
+	 -----: 1281 |Test  Loss: 0.87389 |Test  RMSE: 0.88745 |Eval-test  Time: 23.802
+	 -----: Time: 121.441
+	 -----: Total Time: 5371.986
+	 Round: 1321 |Train Loss: 0.80463 |Train RMSE: 0.89496 |Eval-train Time: 55.719
+	 -----: 1321 |Test  Loss: 0.88196 |Test  RMSE: 0.89171 |Eval-test  Time: 23.850
+	 -----: Time: 121.172
+	 -----: Total Time: 5493.158
+	 Round: 1361 |Train Loss: 0.80114 |Train RMSE: 0.89319 |Eval-train Time: 55.825
+	 -----: 1361 |Test  Loss: 0.87787 |Test  RMSE: 0.88971 |Eval-test  Time: 23.786
+	 -----: Time: 121.217
+	 -----: Total Time: 5614.375
+	 Round: 1401 |Train Loss: 0.74127 |Train RMSE: 0.85906 |Eval-train Time: 55.928
+	 -----: 1401 |Test  Loss: 0.81357 |Test  RMSE: 0.85656 |Eval-test  Time: 23.556
+	 -----: Time: 120.944
+	 -----: Total Time: 5735.319
+	 Round: 1441 |Train Loss: 0.69906 |Train RMSE: 0.83426 |Eval-train Time: 55.892
+	 -----: 1441 |Test  Loss: 0.76638 |Test  RMSE: 0.83152 |Eval-test  Time: 24.004
+	 -----: Time: 121.393
+	 -----: Total Time: 5856.712
+	 Round: 1481 |Train Loss: 0.73052 |Train RMSE: 0.85278 |Eval-train Time: 55.709
+	 -----: 1481 |Test  Loss: 0.79953 |Test  RMSE: 0.84915 |Eval-test  Time: 23.834
+	 -----: Time: 121.003
+	 -----: Total Time: 5977.715
+	 Round: 1521 |Train Loss: 0.67703 |Train RMSE: 0.82102 |Eval-train Time: 55.825
+	 -----: 1521 |Test  Loss: 0.74126 |Test  RMSE: 0.81780 |Eval-test  Time: 24.188
+	 -----: Time: 121.627
+	 -----: Total Time: 6099.342
+	 Round: 1561 |Train Loss: 0.66847 |Train RMSE: 0.81556 |Eval-train Time: 56.032
+	 -----: 1561 |Test  Loss: 0.73043 |Test  RMSE: 0.81182 |Eval-test  Time: 24.099
+	 -----: Time: 121.528
+	 -----: Total Time: 6220.869
+	 Round: 1601 |Train Loss: 0.62626 |Train RMSE: 0.78955 |Eval-train Time: 56.034
+	 -----: 1601 |Test  Loss: 0.68710 |Test  RMSE: 0.78729 |Eval-test  Time: 24.079
+	 -----: Time: 121.790
+	 -----: Total Time: 6342.659
+	 Round: 1641 |Train Loss: 0.62272 |Train RMSE: 0.78729 |Eval-train Time: 55.427
+	 -----: 1641 |Test  Loss: 0.68498 |Test  RMSE: 0.78603 |Eval-test  Time: 23.919
+	 -----: Time: 120.854
+	 -----: Total Time: 6463.514
+	 Round: 1681 |Train Loss: 0.60403 |Train RMSE: 0.77533 |Eval-train Time: 55.917
+	 -----: 1681 |Test  Loss: 0.66488 |Test  RMSE: 0.77449 |Eval-test  Time: 23.942
+	 -----: Time: 121.385
+	 -----: Total Time: 6584.899
+	 Round: 1721 |Train Loss: 0.57289 |Train RMSE: 0.75516 |Eval-train Time: 55.491
+	 -----: 1721 |Test  Loss: 0.63063 |Test  RMSE: 0.75426 |Eval-test  Time: 24.012
+	 -----: Time: 120.927
+	 -----: Total Time: 6705.826
+	 Round: 1761 |Train Loss: 0.55881 |Train RMSE: 0.74570 |Eval-train Time: 55.594
+	 -----: 1761 |Test  Loss: 0.61566 |Test  RMSE: 0.74515 |Eval-test  Time: 24.027
+	 -----: Time: 121.320
+	 -----: Total Time: 6827.145
+	 Round: 1801 |Train Loss: 0.56590 |Train RMSE: 0.75045 |Eval-train Time: 55.490
+	 -----: 1801 |Test  Loss: 0.62399 |Test  RMSE: 0.74998 |Eval-test  Time: 23.873
+	 -----: Time: 121.024
+	 -----: Total Time: 6948.169
+	 Round: 1841 |Train Loss: 0.54919 |Train RMSE: 0.73926 |Eval-train Time: 55.688
+	 -----: 1841 |Test  Loss: 0.60846 |Test  RMSE: 0.74040 |Eval-test  Time: 23.990
+	 -----: Time: 121.293
+	 -----: Total Time: 7069.463
+	 Round: 1881 |Train Loss: 0.53481 |Train RMSE: 0.72948 |Eval-train Time: 55.874
+	 -----: 1881 |Test  Loss: 0.59406 |Test  RMSE: 0.73149 |Eval-test  Time: 23.908
+	 -----: Time: 121.490
+	 -----: Total Time: 7190.953
+	 Round: 1921 |Train Loss: 0.48665 |Train RMSE: 0.69592 |Eval-train Time: 55.728
+	 -----: 1921 |Test  Loss: 0.54258 |Test  RMSE: 0.69903 |Eval-test  Time: 23.979
+	 -----: Time: 121.438
+	 -----: Total Time: 7312.391
+	 Round: 1961 |Train Loss: 0.48161 |Train RMSE: 0.69223 |Eval-train Time: 55.981
+	 -----: 1961 |Test  Loss: 0.53613 |Test  RMSE: 0.69498 |Eval-test  Time: 24.286
+	 -----: Time: 122.026
+	 -----: Total Time: 7434.417
+	 Round: 2001 |Train Loss: 0.46191 |Train RMSE: 0.67808 |Eval-train Time: 55.783
+	 -----: 2001 |Test  Loss: 0.51510 |Test  RMSE: 0.68114 |Eval-test  Time: 24.047
+	 -----: Time: 121.333
+	 -----: Total Time: 7555.750
+	 Round: 2041 |Train Loss: 0.44169 |Train RMSE: 0.66286 |Eval-train Time: 55.514
+	 -----: 2041 |Test  Loss: 0.49391 |Test  RMSE: 0.66688 |Eval-test  Time: 23.864
+	 -----: Time: 121.170
+	 -----: Total Time: 7676.920
+	 Round: 2081 |Train Loss: 0.42513 |Train RMSE: 0.65041 |Eval-train Time: 55.586
+	 -----: 2081 |Test  Loss: 0.47621 |Test  RMSE: 0.65470 |Eval-test  Time: 24.254
+	 -----: Time: 121.336
+	 -----: Total Time: 7798.256
+	 Round: 2121 |Train Loss: 0.40216 |Train RMSE: 0.63250 |Eval-train Time: 55.575
+	 -----: 2121 |Test  Loss: 0.45124 |Test  RMSE: 0.63731 |Eval-test  Time: 23.991
+	 -----: Time: 121.192
+	 -----: Total Time: 7919.448
+	 Round: 2161 |Train Loss: 0.38449 |Train RMSE: 0.61832 |Eval-train Time: 55.777
+	 -----: 2161 |Test  Loss: 0.43194 |Test  RMSE: 0.62363 |Eval-test  Time: 23.968
+	 -----: Time: 121.409
+	 -----: Total Time: 8040.858
+	 Round: 2201 |Train Loss: 0.36678 |Train RMSE: 0.60397 |Eval-train Time: 55.591
+	 -----: 2201 |Test  Loss: 0.41329 |Test  RMSE: 0.60990 |Eval-test  Time: 23.744
+	 -----: Time: 121.199
+	 -----: Total Time: 8162.056
+	 Round: 2241 |Train Loss: 0.34279 |Train RMSE: 0.58391 |Eval-train Time: 56.134
+	 -----: 2241 |Test  Loss: 0.38729 |Test  RMSE: 0.59035 |Eval-test  Time: 24.264
+	 -----: Time: 122.278
+	 -----: Total Time: 8284.334
+	 Round: 2281 |Train Loss: 0.33494 |Train RMSE: 0.57703 |Eval-train Time: 55.911
+	 -----: 2281 |Test  Loss: 0.37869 |Test  RMSE: 0.58380 |Eval-test  Time: 23.963
+	 -----: Time: 121.394
+	 -----: Total Time: 8405.729
+	 Round: 2321 |Train Loss: 0.32042 |Train RMSE: 0.56456 |Eval-train Time: 55.852
+	 -----: 2321 |Test  Loss: 0.36355 |Test  RMSE: 0.57188 |Eval-test  Time: 23.948
+	 -----: Time: 121.239
+	 -----: Total Time: 8526.967
+	 Round: 2361 |Train Loss: 0.29806 |Train RMSE: 0.54446 |Eval-train Time: 55.710
+	 -----: 2361 |Test  Loss: 0.33888 |Test  RMSE: 0.55210 |Eval-test  Time: 24.012
+	 -----: Time: 121.501
+	 -----: Total Time: 8648.468
+	 Round: 2401 |Train Loss: 0.27068 |Train RMSE: 0.51886 |Eval-train Time: 55.870
+	 -----: 2401 |Test  Loss: 0.30901 |Test  RMSE: 0.52710 |Eval-test  Time: 23.810
+	 -----: Time: 121.474
+	 -----: Total Time: 8769.942
+	 Round: 2441 |Train Loss: 0.26475 |Train RMSE: 0.51304 |Eval-train Time: 55.985
+	 -----: 2441 |Test  Loss: 0.30277 |Test  RMSE: 0.52175 |Eval-test  Time: 23.930
+	 -----: Time: 121.681
+	 -----: Total Time: 8891.623
+	 Round: 2481 |Train Loss: 0.24346 |Train RMSE: 0.49201 |Eval-train Time: 61.812
+	 -----: 2481 |Test  Loss: 0.27961 |Test  RMSE: 0.50129 |Eval-test  Time: 26.847
+	 -----: Time: 130.339
+	 -----: Total Time: 9021.963
+	 Round: 2521 |Train Loss: 0.24030 |Train RMSE: 0.48875 |Eval-train Time: 64.187
+	 -----: 2521 |Test  Loss: 0.27588 |Test  RMSE: 0.49806 |Eval-test  Time: 28.047
+	 -----: Time: 143.288
+	 -----: Total Time: 9165.251
+	 Round: 2561 |Train Loss: 0.22842 |Train RMSE: 0.47666 |Eval-train Time: 64.999
+	 -----: 2561 |Test  Loss: 0.26236 |Test  RMSE: 0.48587 |Eval-test  Time: 26.119
+	 -----: Time: 142.744
+	 -----: Total Time: 9307.994
+	 Round: 2601 |Train Loss: 0.21532 |Train RMSE: 0.46262 |Eval-train Time: 64.192
+	 -----: 2601 |Test  Loss: 0.24843 |Test  RMSE: 0.47270 |Eval-test  Time: 27.946
+	 -----: Time: 142.787
+	 -----: Total Time: 9450.781
+	 Round: 2641 |Train Loss: 0.20093 |Train RMSE: 0.44677 |Eval-train Time: 64.075
+	 -----: 2641 |Test  Loss: 0.23217 |Test  RMSE: 0.45688 |Eval-test  Time: 27.804
+	 -----: Time: 143.510
+	 -----: Total Time: 9594.291
+	 Round: 2681 |Train Loss: 0.19068 |Train RMSE: 0.43534 |Eval-train Time: 56.344
+	 -----: 2681 |Test  Loss: 0.22086 |Test  RMSE: 0.44555 |Eval-test  Time: 24.149
+	 -----: Time: 131.223
+	 -----: Total Time: 9725.514
+	 Round: 2721 |Train Loss: 0.17837 |Train RMSE: 0.42112 |Eval-train Time: 55.843
+	 -----: 2721 |Test  Loss: 0.20700 |Test  RMSE: 0.43136 |Eval-test  Time: 24.276
+	 -----: Time: 121.876
+	 -----: Total Time: 9847.390
+	 Round: 2761 |Train Loss: 0.17268 |Train RMSE: 0.41416 |Eval-train Time: 64.889
+	 -----: 2761 |Test  Loss: 0.19941 |Test  RMSE: 0.42354 |Eval-test  Time: 27.107
+	 -----: Time: 134.894
+	 -----: Total Time: 9982.284

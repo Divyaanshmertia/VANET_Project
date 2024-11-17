@@ -1,0 +1,47 @@
+Namespace(architecture='ring', beta_supp=0.5, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_udacity', fit_by_epoch=False, local_steps=1, log_freq=100, lr=0.001, model='FADNet', n_rounds=3300, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='', test=False)
+>>>>>>>>>> start time: Mon Nov 18 01:30:18 2024
+nParams=	341980
+	 Round: 0 |Train Loss: 0.66983 |Train RMSE: 0.81188 |Eval-train Time: 3.214
+	 -----: 0 |Test  Loss: 0.67364 |Test  RMSE: 0.75539 |Eval-test  Time: 0.718
+	 -----: Time: 11.932
+	 -----: Total Time: 11.932
+	 Round: 101 |Train Loss: 0.08243 |Train RMSE: 0.27900 |Eval-train Time: 3.096
+	 -----: 101 |Test  Loss: 0.08544 |Test  RMSE: 0.23662 |Eval-test  Time: 0.745
+	 -----: Time: 31.607
+	 -----: Total Time: 43.538
+	 Round: 201 |Train Loss: 0.14068 |Train RMSE: 0.36884 |Eval-train Time: 3.210
+	 -----: 201 |Test  Loss: 0.14606 |Test  RMSE: 0.33144 |Eval-test  Time: 0.766
+	 -----: Time: 31.119
+	 -----: Total Time: 74.657
+	 Round: 301 |Train Loss: 0.26066 |Train RMSE: 0.50358 |Eval-train Time: 3.291
+	 -----: 301 |Test  Loss: 0.27133 |Test  RMSE: 0.46094 |Eval-test  Time: 0.857
+	 -----: Time: 32.678
+	 -----: Total Time: 107.335
+	 Round: 401 |Train Loss: 0.21806 |Train RMSE: 0.46015 |Eval-train Time: 3.318
+	 -----: 401 |Test  Loss: 0.22451 |Test  RMSE: 0.42096 |Eval-test  Time: 0.824
+	 -----: Time: 31.766
+	 -----: Total Time: 139.101
+	 Round: 501 |Train Loss: 0.28266 |Train RMSE: 0.52602 |Eval-train Time: 3.270
+	 -----: 501 |Test  Loss: 0.28874 |Test  RMSE: 0.49016 |Eval-test  Time: 0.842
+	 -----: Time: 31.029
+	 -----: Total Time: 170.129
+	 Round: 601 |Train Loss: 0.25307 |Train RMSE: 0.49527 |Eval-train Time: 3.192
+	 -----: 601 |Test  Loss: 0.25533 |Test  RMSE: 0.44709 |Eval-test  Time: 0.798
+	 -----: Time: 30.779
+	 -----: Total Time: 200.909
+	 Round: 701 |Train Loss: 0.40092 |Train RMSE: 0.62544 |Eval-train Time: 3.389
+	 -----: 701 |Test  Loss: 0.40105 |Test  RMSE: 0.57257 |Eval-test  Time: 0.767
+	 -----: Time: 32.181
+	 -----: Total Time: 233.090
+	 Round: 801 |Train Loss: 2.08130 |Train RMSE: 1.43595 |Eval-train Time: 3.309
+	 -----: 801 |Test  Loss: 2.08522 |Test  RMSE: 1.38079 |Eval-test  Time: 0.834
+	 -----: Time: 32.710
+	 -----: Total Time: 265.800
+	 Round: 901 |Train Loss: 1.75894 |Train RMSE: 1.31917 |Eval-train Time: 2.970
+	 -----: 901 |Test  Loss: 1.76230 |Test  RMSE: 1.26842 |Eval-test  Time: 0.741
+	 -----: Time: 31.141
+	 -----: Total Time: 296.941
+	 Round: 1001 |Train Loss: 4.61238 |Train RMSE: 2.13980 |Eval-train Time: 3.207
+	 -----: 1001 |Test  Loss: 4.62980 |Test  RMSE: 2.07428 |Eval-test  Time: 0.793
+	 -----: Time: 31.313
+	 -----: Total Time: 328.254

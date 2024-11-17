@@ -29,7 +29,7 @@ class Network(ABC):
 
         # create logger
         if args.save_logg_path == "":
-            self.logger_path = os.path.join("loggs", args_to_string(args), args.architecture)
+            self.logger_path = os.path.join("loggs", args.model,args_to_string(args), args.architecture)
         else:
             self.logger_path = args.save_logg_path
         os.makedirs(self.logger_path, exist_ok=True)

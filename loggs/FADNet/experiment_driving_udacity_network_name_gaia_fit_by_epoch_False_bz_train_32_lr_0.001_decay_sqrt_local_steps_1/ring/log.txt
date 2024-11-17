@@ -1,0 +1,23 @@
+Namespace(architecture='ring', beta_supp=0.5, bz_test=32, bz_train=32, decay='sqrt', device='cuda', experiment='driving_udacity', fit_by_epoch=False, local_steps=1, log_freq=100, lr=0.001, model='FADNet', n_rounds=3300, network_name='gaia', num_workers=11, optimizer='adam', random_ring_proba=0.5, save_logg_path='', test=False)
+>>>>>>>>>> start time: Mon Nov 18 01:45:47 2024
+nParams=	341980
+	 Round: 0 |Train Loss: 0.66983 |Train RMSE: 0.81188 |Eval-train Time: 3.707
+	 -----: 0 |Test  Loss: 0.67364 |Test  RMSE: 0.75539 |Eval-test  Time: 0.819
+	 -----: Time: 12.318
+	 -----: Total Time: 12.318
+	 Round: 101 |Train Loss: 0.08243 |Train RMSE: 0.27900 |Eval-train Time: 3.188
+	 -----: 101 |Test  Loss: 0.08544 |Test  RMSE: 0.23662 |Eval-test  Time: 0.785
+	 -----: Time: 31.740
+	 -----: Total Time: 44.059
+	 Round: 201 |Train Loss: 0.14068 |Train RMSE: 0.36884 |Eval-train Time: 3.047
+	 -----: 201 |Test  Loss: 0.14606 |Test  RMSE: 0.33144 |Eval-test  Time: 0.755
+	 -----: Time: 30.740
+	 -----: Total Time: 74.799
+	 Round: 301 |Train Loss: 0.26066 |Train RMSE: 0.50358 |Eval-train Time: 3.324
+	 -----: 301 |Test  Loss: 0.27133 |Test  RMSE: 0.46094 |Eval-test  Time: 0.848
+	 -----: Time: 31.024
+	 -----: Total Time: 105.823
+	 Round: 401 |Train Loss: 0.21806 |Train RMSE: 0.46015 |Eval-train Time: 5.411
+	 -----: 401 |Test  Loss: 0.22451 |Test  RMSE: 0.42096 |Eval-test  Time: 1.366
+	 -----: Time: 48.584
+	 -----: Total Time: 154.407
