@@ -22,7 +22,7 @@ MODEL_SIZE_DICT = {
 
 # Model computation time in ms
 COMPUTATION_TIME_DICT = {
-	"driving_udacity": 1200,
+	"driving_udacity": 270,
 	"driving_gazebo": 1200,
 	"driving_carla": 7.7,
 }

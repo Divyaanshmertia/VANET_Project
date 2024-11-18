@@ -1,16 +1,15 @@
 # Pycharm and github
 .idea/
 
-
+*.zip
 # Environment
 env/
 
 # Dataset
 /data/
-
+loggs/
 # Graph resuls
 
 # Loggs, models and pretrained models/
-
 
 # Json and plots
