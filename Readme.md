@@ -18,3 +18,6 @@
 Our entire team thanks the author of the paper Deep Federated Learning for Autonomous Driving published in 33rd IEEE Intelligent Vehicles Symposium.
 
 We also acknowledge the work of github user 'omarfoq' for helping us provide the relevant graph utilities which have made the job of producing overlay graphs easier for us.
+
+## Team Members:
+-  Swati Shrivastava
